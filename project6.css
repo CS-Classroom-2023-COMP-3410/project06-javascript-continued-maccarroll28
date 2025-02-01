@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f4f9;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#question {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.answer-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.answer-btn:hover {
+  background-color: #0056b3;
+}
+
+.answer-btn.correct {
+  background-color: #28a745;
+}
+
+.answer-btn.wrong {
+  background-color: #dc3545;
+}
+
+#next-btn,
+#restart-btn,
+#retry-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.review-item {
+  margin: 20px 0;
+  text-align: left;
+}
+
+#timer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+#progress-container {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #007bff;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Smooth fade-in for questions */
+#question-container {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#question-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button click effect */
+.answer-btn {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.answer-btn:active {
+  transform: scale(0.95);
+}
+
+/* Progress bar animation */
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #007bff;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Smooth fade-in for results */
+#results-container {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#results-container.show {
+  opacity: 1;
+  transform: scale(1);
+}
